@@ -18,9 +18,12 @@ export default function Navigation() {
                         <LinkContainer to="/submit">
                             <Nav.Link>Submit</Nav.Link>
                         </LinkContainer>
-
-                        <Nav.Link href="history">History</Nav.Link>
-                        <Nav.Link href="account">Account</Nav.Link>
+                        <LinkContainer to="/history">
+                            <Nav.Link>History</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/account">
+                            <Nav.Link>Account</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Container>
             </Navbar>
