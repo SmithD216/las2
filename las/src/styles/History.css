@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+
+#history-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history-thumbnail {
+    width: 50%;
+    display: inline-block;
+}
+
+.history-source {
+    width: 100%;
+}
+
+.history-title {
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+}
