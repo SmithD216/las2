@@ -7,8 +7,13 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
 export default function Account() {
-    const [show, setShow] = useState(false);
+    const [follow, setFollow] = useState(false);
 
+    function followed() {
+        setFollow((prevFollow) => !prevFollow);
+    }
+
+    const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -26,8 +31,12 @@ export default function Account() {
                     <p className="text-muted mb-1">Full Stack Developer</p>
                     <p className="text-muted mb-4">Glasgow</p>
                     <div className="d-flex justify-content-center mb-2">
-                        <button type="button" className="btn btn-primary">
-                            Follow
+                        <button
+                            type="button"
+                            className="btn btn-primary"
+                            onClick={followed}
+                        >
+                            {follow ? "Follow" : "Followed"}
                         </button>
                         <button
                             type="button"
