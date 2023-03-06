@@ -12,7 +12,7 @@ export default function Navigation() {
             <Navbar bg="dark" variant="dark">
                 <Container>
                     <LinkContainer to="/home">
-                        <Navbar.Brand>Navbar</Navbar.Brand>
+                        <Navbar.Brand>Home</Navbar.Brand>
                     </LinkContainer>
                     <Nav className="ml-auto">
                         <LinkContainer to="/submit">
