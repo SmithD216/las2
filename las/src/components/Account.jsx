@@ -36,7 +36,7 @@ export default function Account() {
                             className="btn btn-primary"
                             onClick={followed}
                         >
-                            {follow ? "Follow" : "Followed"}
+                            {follow ? "Followed" : "Follow"}
                         </button>
                         <button
                             type="button"
@@ -80,7 +80,7 @@ export default function Account() {
                         Close
                     </Button>
                     <Button variant="primary" onClick={handleClose}>
-                        Save Changes
+                        Send Message
                     </Button>
                 </Modal.Footer>
             </Modal>
