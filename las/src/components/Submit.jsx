@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "../styles/Submit.css";
 
@@ -19,6 +19,21 @@ export default function Submit() {
             [event.target.name]: value,
         });
     }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            body: JSON.stringify({
+                title: submitValues.title,
+                picture: submitValues.url,
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+            },
+        })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+    };
 
     return (
         <div id="submission-form" className="mt-5 mx-auto">
@@ -55,6 +70,7 @@ export default function Submit() {
                     variant="primary"
                     type="submit"
                     className="submit-button mx-auto d-md-block"
+                    onClick={handleSubmit}
                 >
                     Submit
                 </Button>
