@@ -7,10 +7,19 @@ import Form from "react-bootstrap/Form";
 import { Container } from "react-bootstrap";
 
 export default function Submit() {
-    const [urlValue, setUrlValue] = useState("");
-    const onChange = (e) => {
-        setUrlValue(e.target.value);
-    };
+    const [submitValues, setSubmitValues] = useState({
+        title: "",
+        url: "",
+    });
+
+    function onChange(event) {
+        const value = event.target.value;
+        setSubmitValues({
+            ...submitValues,
+            [event.target.name]: value,
+        });
+    }
+
     return (
         <div id="submission-form" className="mt-5 mx-auto">
             <Form className="submissions">
@@ -19,6 +28,9 @@ export default function Submit() {
                     <Form.Control
                         type="text"
                         placeholder="Enter title of work"
+                        name="title"
+                        value={submitValues.title}
+                        onChange={onChange}
                     />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formUrl">
@@ -26,6 +38,8 @@ export default function Submit() {
                     <Form.Control
                         type="url"
                         placeholder="https://imgur.com/"
+                        name="url"
+                        value={submitValues.url}
                         onChange={onChange}
                     />
                 </Form.Group>
@@ -33,7 +47,7 @@ export default function Submit() {
                     <img
                         id="submit-preview"
                         className="img-fluid rounded d-block mx-auto mb-2"
-                        src={urlValue}
+                        src={submitValues.url}
                         alt=""
                     />
                 </Container>
