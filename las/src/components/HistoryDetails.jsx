@@ -11,12 +11,11 @@ export default function HistoryDetails() {
             })
             .then((data) => {
                 setDetail(data);
-                console.log(detail);
             });
     }, []);
 
     return detail[picture] ? (
-        <div>
+        <div id="history-detail-card">
             <img
                 className="history-detail-image"
                 alt="picture"

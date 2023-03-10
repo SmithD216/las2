@@ -6,7 +6,7 @@ export default function History() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/photos`)
+        fetch(`https://jsonplaceholder.typicode.com/photos?limit=50`)
             .then((res) => {
                 return res.json();
             })
