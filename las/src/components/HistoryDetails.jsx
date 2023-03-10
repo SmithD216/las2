@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import "../styles/HistoryDetails.css";
+
 export default function HistoryDetails() {
     const { picture } = useParams();
     const [detail, setDetail] = useState([1]);
@@ -17,7 +19,7 @@ export default function HistoryDetails() {
     return detail[picture] ? (
         <div id="history-detail-card">
             <img
-                className="history-detail-image"
+                className="history-detail-image d-block mx-auto mt-3 mb-3"
                 alt="picture"
                 src={detail[picture].url}
             />
