@@ -18,7 +18,7 @@ export default function History() {
     const display = posts.slice(0, 10).map((element, index) => {
         return (
             <div className="history-thumbnail" key={element.id}>
-                <Link to={`/history/${index + 1}`}>
+                <Link to={`/history/${index}`}>
                     <img
                         className="history-source"
                         alt="picture"
