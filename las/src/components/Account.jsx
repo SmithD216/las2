@@ -27,9 +27,9 @@ export default function Account() {
                         className="rounded-circle img-fluid"
                         id="account-image"
                     />
-                    <h5 className="my-3">Dylan Smith</h5>
-                    <p className="text-muted mb-1">Full Stack Developer</p>
-                    <p className="text-muted mb-4">Glasgow</p>
+                    <h5 className="my-3">Artist Name</h5>
+                    <p className="text-muted mb-1">Art Medium</p>
+                    <p className="text-muted mb-4">Location</p>
                     <div className="d-flex justify-content-center mb-2">
                         <button
                             type="button"
