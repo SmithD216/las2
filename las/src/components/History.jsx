@@ -5,7 +5,7 @@ import useFetch from "../hooks/useFetch";
 
 export default function History() {
     const { data: posts } = useFetch(
-        `https://jsonplaceholder.typicode.com/photos?limit=20`
+        `https://jsonplaceholder.typicode.com/photos?_limit=20`
     );
 
     const display = posts.slice(0, 10).map((element, index) => {

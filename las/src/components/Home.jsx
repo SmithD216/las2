@@ -2,19 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
+import useFetch from "../hooks/useFetch";
 
 export default function Home() {
-    const [posts, setPosts] = useState([]);
-
-    useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/photos?limit=50`)
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => {
-                setPosts(data);
-            });
-    }, []);
+    const { data: posts } = useFetch(
+        `https://jsonplaceholder.typicode.com/photos`
+    );
 
     return (
         <>
