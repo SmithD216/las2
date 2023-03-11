@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
 export default function Home() {
@@ -34,45 +35,51 @@ export default function Home() {
                 <br />
                 <div className="row">
                     <div className="col-sm-4">
-                        <img
-                            src={
-                                posts[posts.length - 1]
-                                    ? posts[posts.length - 1].thumbnailUrl
-                                    : "Loading"
-                            }
-                            className="img-responsive"
-                            alt="Image"
-                        />
+                        <Link to={`/history/${posts.length - 1}`}>
+                            <img
+                                src={
+                                    posts[posts.length - 1]
+                                        ? posts[posts.length - 1].thumbnailUrl
+                                        : "Loading"
+                                }
+                                className="img-responsive"
+                                alt="Image"
+                            />
+                        </Link>
                         <p>
                             {posts[posts.length - 1] &&
                                 posts[posts.length - 1].title}
                         </p>
                     </div>
                     <div className="col-sm-4">
-                        <img
-                            src={
-                                posts[posts.length - 2]
-                                    ? posts[posts.length - 2].thumbnailUrl
-                                    : "Loading"
-                            }
-                            className="img-responsive"
-                            alt="Image"
-                        />
+                        <Link to={`/history/${posts.length - 2}`}>
+                            <img
+                                src={
+                                    posts[posts.length - 2]
+                                        ? posts[posts.length - 2].thumbnailUrl
+                                        : "Loading"
+                                }
+                                className="img-responsive"
+                                alt="Image"
+                            />
+                        </Link>
                         <p>
                             {posts[posts.length - 2] &&
                                 posts[posts.length - 2].title}
                         </p>
                     </div>
                     <div className="col-sm-4">
-                        <img
-                            src={
-                                posts[posts.length - 3]
-                                    ? posts[posts.length - 3].thumbnailUrl
-                                    : "Loading"
-                            }
-                            className="img-responsive"
-                            alt="Image"
-                        />
+                        <Link to={`/history/${posts.length - 3}`}>
+                            <img
+                                src={
+                                    posts[posts.length - 3]
+                                        ? posts[posts.length - 3].thumbnailUrl
+                                        : "Loading"
+                                }
+                                className="img-responsive"
+                                alt="Image"
+                            />
+                        </Link>
                         <p>
                             {posts[posts.length - 3] &&
                                 posts[posts.length - 3].title}
