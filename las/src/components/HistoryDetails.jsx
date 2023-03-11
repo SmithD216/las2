@@ -2,19 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import "../styles/HistoryDetails.css";
-
+import useFetch from "../hooks/useFetch";
 export default function HistoryDetails() {
     const { picture } = useParams();
-    const [detail, setDetail] = useState([1]);
-    useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/photos?${picture}`)
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => {
-                setDetail(data);
-            });
-    }, []);
+    const { data: detail } = useFetch(
+        `https://jsonplaceholder.typicode.com/photos?limit=20`
+    );
 
     return detail[picture] ? (
         <div id="history-detail-card" className="card mx-auto mt-3 mb-3">
