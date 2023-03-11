@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/History.css";
+import useFetch from "../hooks/useFetch";
 
 export default function History() {
-    const [posts, setPosts] = useState([]);
-
-    useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/photos?limit=50`)
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => {
-                setPosts(data);
-            });
-    }, []);
+    const { data: posts } = useFetch(
+        `https://jsonplaceholder.typicode.com/photos?limit=20`
+    );
 
     const display = posts.slice(0, 10).map((element, index) => {
         return (
