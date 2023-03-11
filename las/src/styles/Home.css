@@ -7,7 +7,7 @@
         url(https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
     background-size: cover;
     color: white;
-    -webkit-text-stroke: 1px black;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
     height: 40rem;
 }
 

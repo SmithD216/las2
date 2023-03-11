@@ -42,7 +42,7 @@ export default function Home() {
                                         ? posts[posts.length - 1].thumbnailUrl
                                         : "Loading"
                                 }
-                                className="img-responsive"
+                                className="img-responsive mb-3"
                                 alt="Image"
                             />
                         </Link>
@@ -59,7 +59,7 @@ export default function Home() {
                                         ? posts[posts.length - 2].thumbnailUrl
                                         : "Loading"
                                 }
-                                className="img-responsive"
+                                className="img-responsive mb-3"
                                 alt="Image"
                             />
                         </Link>
@@ -76,7 +76,7 @@ export default function Home() {
                                         ? posts[posts.length - 3].thumbnailUrl
                                         : "Loading"
                                 }
-                                className="img-responsive"
+                                className="img-responsive mb-3"
                                 alt="Image"
                             />
                         </Link>
