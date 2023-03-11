@@ -43,7 +43,9 @@ export default function Home() {
                             className="img-responsive"
                             alt="Image"
                         />
-                        <p>{posts[posts.length - 1].title}</p>
+                        <p>
+                            {posts[length - 1] && posts[posts.length - 1].title}
+                        </p>
                     </div>
                     <div className="col-sm-4">
                         <img
@@ -55,7 +57,9 @@ export default function Home() {
                             className="img-responsive"
                             alt="Image"
                         />
-                        <p>{posts[posts.length - 2].title}</p>
+                        <p>
+                            {posts[length - 2] && posts[posts.length - 2].title}
+                        </p>
                     </div>
                     <div className="col-sm-4">
                         <img
@@ -67,7 +71,9 @@ export default function Home() {
                             className="img-responsive"
                             alt="Image"
                         />
-                        <p>{posts[posts.length - 3].title}</p>
+                        <p>
+                            {posts[length - 3] && posts[posts.length - 3].title}
+                        </p>
                     </div>
                 </div>
             </div>
