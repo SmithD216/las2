@@ -6,7 +6,7 @@ import useFetch from "../hooks/useFetch";
 export default function HistoryDetails() {
     const { picture } = useParams();
     const { data: detail } = useFetch(
-        `https://jsonplaceholder.typicode.com/photos?limit=20`
+        `https://jsonplaceholder.typicode.com/photos?${picture}`
     );
 
     return detail[picture] ? (
