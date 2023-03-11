@@ -30,7 +30,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="container text-center mt-4 home-featured-container">
-                <h3>Featured Posts</h3>
+                <h3>Latest Posts</h3>
                 <br />
                 <div className="row">
                     <div className="col-sm-4">
@@ -44,7 +44,8 @@ export default function Home() {
                             alt="Image"
                         />
                         <p>
-                            {posts[length - 1] && posts[posts.length - 1].title}
+                            {posts[posts.length - 1] &&
+                                posts[posts.length - 1].title}
                         </p>
                     </div>
                     <div className="col-sm-4">
@@ -58,7 +59,8 @@ export default function Home() {
                             alt="Image"
                         />
                         <p>
-                            {posts[length - 2] && posts[posts.length - 2].title}
+                            {posts[posts.length - 2] &&
+                                posts[posts.length - 2].title}
                         </p>
                     </div>
                     <div className="col-sm-4">
@@ -72,7 +74,8 @@ export default function Home() {
                             alt="Image"
                         />
                         <p>
-                            {posts[length - 3] && posts[posts.length - 3].title}
+                            {posts[posts.length - 3] &&
+                                posts[posts.length - 3].title}
                         </p>
                     </div>
                 </div>
